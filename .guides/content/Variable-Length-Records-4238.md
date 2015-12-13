@@ -12,43 +12,30 @@ Hints:
 Working with files and records is a great time to use functions. The example program provided in the challenge has **stubs** (empty functions) for you to fill out to help.
 
 
-### Array.join()
-There is a function named `join()` that will convert an array of strings into a single string with a delimiter between the parts.
-
-```javascript
-list= ['a', 'b', 'c']
-delimiter= ':'
-console.log(list.join(delimiter))
-```
-{Run the join sample}(node content/join.js)
-
 ### The String.split() function
-There is another function called `split()` that you may find will help you. 
+There is a function named `split()` that you may find will help you.
 
-```javascript
-text= 'a:b:c:d'
-delimiter= ':'
-list= text.split(delimiter)
-console.log(list)
+```java
+String text = "a:b:c:d"
+String delimiter = ":";
+String[] list = text.split(delimiter);
+System.out.println(list);
 ```
-{Run the split sample}(node content/split.js)
+{Run the split sample}(content/var_length/Split.sh)
 
 Sample Program:
 ----
 Now look at the sample provided that manages a simple pipe delimited string. It uses functions in the program. It also uses the `split()` function to convert pipe delimited strings into lists:
-```javascript
-6  function getListFromPipeDelimitedText(pipeDelimitedText) {
-7    var recordList= pipeDelimitedText.split('|')
-8    return recordList
-9  }
-```
-It also uses the `join()` function to convert lists into pipe delimited strings:
-```javascript
-12  function getPipeDelimitedTextFromList(recordList){
-13    return recordList.join('|')
-14  }
+```java
+public static String[] getListFromPipeDelimitedText(String data) {
+  String delimiter = "\\|";
+  String[] list = data.split(delimiter);
+  return list;
+}
 ```
 
-{Run the Pipe Sample}(node content/pipe-split.js)
+Note the `"\\|"` delimiter. Because the `.split()` method uses Regular Expressions and the `|` character is a metacharacter, it must be _escaped_ using double back-slashes. 
+
+{Run the Pipe Sample}(content/var_length/VarLength.sh)
 
 These should help you with the next challenge.

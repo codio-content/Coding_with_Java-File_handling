@@ -87,7 +87,7 @@
      "action": "close"
     },
     {
-     "path": "content/filedescriptors.js",
+     "path": "content/file_descriptor/Filedescriptor.java",
      "panel": 0,
      "action": "open"
     }
@@ -109,7 +109,7 @@
      "action": "close"
     },
     {
-     "path": "content/filedescriptors.js",
+     "path": "content/file_descriptor/Filedescriptor.java",
      "panel": 0,
      "action": "open"
     }
@@ -203,7 +203,7 @@
      "action": "close"
     },
     {
-     "path": "content/write-text-file.js",
+     "path": "content/write_file/WriteFile.java",
      "panel": 0,
      "action": "open"
     }
@@ -275,7 +275,7 @@
      "action": "close"
     },
     {
-     "path": "content/parse-fixed-length.js",
+     "path": "content/fixed_length/FixedLength.java",
      "panel": 0,
      "action": "open"
     }
@@ -319,7 +319,7 @@
      "action": "close"
     },
     {
-     "path": "content/pipe-split.js",
+     "path": "content/var_length/VarLength.java",
      "panel": 0,
      "action": "open"
     }

@@ -1,11 +1,14 @@
 We can write the contents of a variable out to a file all at once like this:
 
-```javascript
-11  fs.writeFileSync(filepath, text, ‘utf8’);
+```java
+String str = "Line 1";
+fw.write(str);
 ```
 
-This command will cause the `fs` library to write out the contents of the variable `text` to the file in the path contained in `filepath`.
+This command will cause the `FileWriter` library to write out the contents of the variable `str` to the file in the path contained in `filepath`.
 
-{Run the Sample Code}(node content/write-text-file.js)
+{Run the Sample Code}(content/write_file/WriteFile.sh)
 
-Notice that we are printing the contents of the same file two times, but we changed the contents in between.
+To see the result of our code, click the link below to open the file as specified in the file path:
+
+[Open write-file.txt file](open_file content/textfiles/write-file.txt)

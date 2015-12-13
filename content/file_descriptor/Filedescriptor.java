@@ -12,10 +12,10 @@ public class Filedescriptor {
       File pathB = new File("../textfiles/cheese.txt"); // to files
       File pathC = new File("../textfiles/empty.txt");
       
-      FileInputStream fileInputStreamA = new FileInputStream(pathA);
+      FileInputStream fileInputStreamA = new FileInputStream(pathA); // open file A
       FileDescriptor fileDescriptorA = fileInputStreamA.getFD();
       
-      FileInputStream fileInputStreamB = new FileInputStream(pathB);
+      FileInputStream fileInputStreamB = new FileInputStream(pathB); // open file B
       FileDescriptor fileDescriptorB = fileInputStreamB.getFD();
 
       System.out.println("File Desc A: "+ fileDescriptorA.hashCode()); // print file desc A   
