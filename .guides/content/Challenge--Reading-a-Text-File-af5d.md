@@ -1,29 +1,40 @@
-
 {Check It!|assessment}(test-3353555413)
 
 |||guidance
 ### Solution
-```javascript
-// Load the fs library.
-var fs = require('fs')
+```java
+// Load the fs library
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
-// Load our command line arguments
-var P= process.argv[2]
-var S= process.argv[3]
+public class Challenge {
 
-// Read in the data from our file
-var data = fs.readFileSync(P, 'utf8')
+    public static void main(String[] args) throws IOException {
 
-// Run through the file data, counting S.
-// We will use the indexOf function to assist us.
-var counter= 0
-var nextIndex= data.indexOf(S)
-while(nextIndex >= 0) {
-  counter= counter + 1
-  data= data.substring(nextIndex + S.length)
-  nextIndex= data.indexOf(S)
+      // Load our command line arguments
+      String P = args[0];
+
+      // Write your code below
+      // Create new file passing the path P
+      File file = new File(P); 
+      // Create fis for reading file content
+      FileInputStream fis = new FileInputStream(file);
+      // File content into byte data
+      byte[] data = new byte[(int) file.length()];
+      
+      // Read file content
+      fis.read(data);
+      // Close file
+      fis.close();
+      // Save file content into variable
+      String fileContent = new String(data, "UTF-8");
+     
+      // Print file content
+      System.out.println(fileContent);
+
+    }
 }
 
-console.log(counter)
 ```
 |||

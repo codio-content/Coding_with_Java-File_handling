@@ -181,7 +181,7 @@
      "action": "close"
     },
     {
-     "path": "challenges/read-text-file.js",
+     "path": "challenges/read-text-file/Challenge.java",
      "panel": 0,
      "action": "open"
     }
