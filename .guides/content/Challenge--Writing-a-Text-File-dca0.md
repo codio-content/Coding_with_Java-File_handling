@@ -1,38 +1,55 @@
-
 {Check It!|assessment}(test-808628205)
+
+Click on the link below to open the output file `O` and check your results:
+
+[Open empty.txt file](open_file content/textfiles/empty.txt)
 
 |||guidance
 ### Solution
-```javascript
+```java
 // Load the file system library
-fs = require('fs')             
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.IOException;
 
-// Get the filepath from the command line
-var I= process.argv[2] 
-var O= process.argv[3] 
-var S= process.argv[4]
-var T= process.argv[5]
+public class Challenge {
 
-// Your code goes here
+    public static void main(String[] args) throws IOException {
+      
+        // Get the filepath from the command line
+        String I= args[0];
+        String O= args[1];
+        String S= args[2];
+        String T= args[3];
 
-// Load the data from the input path
-var filedata= fs.readFileSync(I, 'utf8', 'r')
+        // Your code goes here
 
-// Create a variable to hold our output while we build it
-var output= ""
-
-// Find the first occurance of S
-var positionS= filedata.indexOf(S)
-
-// If positionS is -1, we are done.
-while(positionS >= 0) {
-  output+= filedata.substring(0, positionS) + T
-  filedata= filedata.substring(positionS + S.length)
-  positionS= filedata.indexOf(S)
+        // Load the data from the input path
+        File inputFile = new File(I);
+        FileInputStream fis = new FileInputStream(inputFile);
+        byte[] data = new byte[(int) inputFile.length()];
+        fis.read(data);
+        fis.close();
+        
+        // Create a variable to hold our output while we build it
+        String output = new String(data, "UTF-8");
+        // Replace S with T 
+        output = output.replaceAll(S, T);
+        
+        // Load output file and the FileWriter library
+        File outputFile = new File(O);
+        FileWriter fw = new FileWriter(outputFile, true);
+        
+        // Write to the output file
+        fw.write(output);
+      
+        // Don't forget to close it
+        fw.close();
+      
+        
+    }
 }
-output+= filedata
 
-// Write out the contents.
-fs.writeFileSync(O, output, 'utf8')
 ```
 |||

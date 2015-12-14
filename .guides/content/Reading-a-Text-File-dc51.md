@@ -10,3 +10,12 @@ A `FileInputStream` obtains input bytes from a file in a file system. Remember t
 
 While this shortcut will help us learn the basics of working with files, remember that many files will be too large to read into memory all at once and will have to be processed in small amounts at a time. But for now we will work with small files that we can load into memory all at once.
 
+### Replacing file content
+It is possible to replace content in a file by using the `.replaceAll()` method:
+
+```java
+String fileContent = new String(data, "UTF-8");
+fileContent = fileContent.replaceAll("parrot", "toucan");
+```
+
+{Run Sample Code}(content/read_file/ReplaceFile.sh)

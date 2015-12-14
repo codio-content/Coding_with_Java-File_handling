@@ -8,5 +8,3 @@ var S= process.argv[4]  // String S
 var T= process.argv[5]  // String T
 
 // Your code goes here
-
-

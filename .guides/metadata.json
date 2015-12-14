@@ -159,7 +159,7 @@
      "action": "close"
     },
     {
-     "path": "content/read-text-file.js",
+     "path": "content/read_file/ReadFile.java",
      "panel": 0,
      "action": "open"
     }

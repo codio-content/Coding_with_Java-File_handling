@@ -11,6 +11,23 @@ Hints:
 ### Use Functions of Your Own
 Working with files and records is a great time to use functions. The example program provided in the challenge has **stubs** (empty functions) for you to fill out to help.
 
+### Array to strings
+It is possible to convert an array of strings into a single string with a separator between the parts by concatenating the strings:
+
+```java
+String[] strs = {"Yeah", "yeah", "yeh"};
+String sep = "/";
+String newStr = "";
+for (int i = 0; i < strs.length; i++) {
+  if (i == strs.length -1) {
+    newStr += strs[i];
+  } else {
+    newStr += strs[i] + sep;
+  }
+}
+System.out.println(newStr); // "Yeah/yeah/yeh"
+```
+
 
 ### The String.split() function
 There is a function named `split()` that you may find will help you.
