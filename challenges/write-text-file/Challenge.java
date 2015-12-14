@@ -15,28 +15,6 @@ public class Challenge {
         String T= args[3];
 
         // Your code goes here
-
-        // Load the data from the input path
-        File inputFile = new File(I);
-        FileInputStream fis = new FileInputStream(inputFile);
-        byte[] data = new byte[(int) inputFile.length()];
-        fis.read(data);
-        fis.close();
-        
-        // Create a variable to hold our output while we build it
-        String output = new String(data, "UTF-8");
-        // Replace S with T 
-        output = output.replaceAll(S, T);
-        
-        // Load output file and the FileWriter library
-        File outputFile = new File(O);
-        FileWriter fw = new FileWriter(outputFile, true);
-        
-        // Write to the output file
-        fw.write(output);
-      
-        // Don't forget to close it
-        fw.close();
       
         
     }

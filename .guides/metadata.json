@@ -225,7 +225,7 @@
      "action": "close"
     },
     {
-     "path": "challenges/write-text-file.js",
+     "path": "challenges/write-text-file/Challenge.java",
      "panel": 0,
      "action": "open"
     }
@@ -297,7 +297,7 @@
      "action": "close"
     },
     {
-     "path": "challenges/fixed-length-record.js",
+     "path": "challenges/fixed-length-record/Challenge.java",
      "panel": 0,
      "action": "open"
     }

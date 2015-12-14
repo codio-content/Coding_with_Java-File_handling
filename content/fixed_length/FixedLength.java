@@ -4,7 +4,7 @@ public class FixedLength {
 
     public static void main(String[] args) {
       
-      // sample data with records <= 6 characters long
+      // sample data with records 6 characters long
       String data = "   100  1000     1999999   700";
       System.out.println(data);
 

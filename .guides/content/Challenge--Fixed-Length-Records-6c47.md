@@ -1,55 +1,62 @@
-For this challenge, our fields are:
-- 16 characters for first name
-- 16 for a last name
-- 8 for a birthday in DDMMYYYY order.
-
-Our file would look like this:
-
-`Adam____________Smith___________11111985`
-`Theodore________Anderson________20031990`
-`Monty___________Biscuit-Barrel__18101980`
-
-*Note that there are no newline characters at the end of the records. It is split up here so we can read it.*
-
 {Check It!|assessment}(test-1456892332)
+
+You can open the file at any moment by clicking this link:
+
+[Open empty.txt file](open_file challenges/fixed-length-record/empty.txt)
 
 |||guidance
 ### Solution
-```javascript
-// Load the file system library
-fs = require('fs')             
+```java
+import java.io.File; // make file library available
+import java.io.FileWriter;
+import java.io.IOException;
 
-// Get the filepath from the command line
-var P= process.argv[2] 
-var F= process.argv[3]
-var L= process.argv[4]
-var B= process.argv[5]
+public class Challenge {
 
-// Your code goes here
-var data= fs.readFileSync(P, 'utf8')
+    public static void main(String[] args) throws IOException {
+      
+        // Input variables
+        File filepath = new File(args[0]);
+        FileWriter fw = new FileWriter(filepath, true);
+        String[][] data = new String[][]{
+          {args[1], args[2], args[3]},
+          {args[4], args[5], args[6]}, 
+          {args[7], args[8], args[9]}
+        };
+        
+        // Write your code below
+        
+        // Set record length
+        int recordLength = 12;
+        
+        // Define empty element to be written
+        String element;
+        // Begin 2d array loop
+        for (int row = 0; row < data.length; row++) {
+          // Begin column loop
+          for (int column = 0; column < data[row].length; column++) {
+            // Define empty separator
+            String separator = "";
+            // Define element length 
+            int elementLength = data[row][column].length();
+            // Save column to element variable
+            element = data[row][column];
+            // Check if is last element in row
+            if (column < (data[row].length-1)) {
+              // Set separator
+              for (int i = 0; i < (recordLength - elementLength); i++) {
+                separator += ".";
+              }
+            }
+            // Concat element + separator
+            fw.write(element+separator);
+          }
+          fw.write(System.lineSeparator()); //new line
+        }
+        // Don't forget to close the file
+        fw.close();
 
-// Create a list of all the records
-var recordList= []
-while(data.length > 0){
-  var record= []
-  record[0]= data.substring(0,16)
-  record[1]= data.substring(16,32)
-  record[2]= data.substring(32,40)
-  recordList.push(record)
-  data= data.substring(40)
+    }
 }
-
-// Find the matching name
-var output= ''
-for(var i=0; i < recordList.length; i++){
-  var thisRecord= recordList[i]
-  if(thisRecord[0].trim() == F && thisRecord[1].trim() == L){
-    thisRecord[2]= B
-  }
-  output+= thisRecord[0] + thisRecord[1] + thisRecord[2]
-}
-
-// Write out the finished string to our file P
-fs.writeFileSync(P, output, 'utf8')
 
 ```

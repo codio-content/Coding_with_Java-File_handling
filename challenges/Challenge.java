@@ -23,5 +23,20 @@ public class Challenge {
 
         // Write out the contents.
         fs.writeFileSync(O, output, 'utf8')
+          
+        String[] A = {"Wes", "Anderson", "00000000"};
+        String[] B = {"Emily", "Valdez", "11111111"};
+        for (int i = 0; i < A.length; i++) {
+          int elementLength = A[i].length();
+          element = A[i];
+          String separator = "";
+          if (i != A.length-1) {
+            for (int j = 0; j < (recordLength - elementLength); j++) {
+              separator += ".";
+            }
+          }
+          fw.write(element+separator);
+        }
+        fw.close();
     }
 }

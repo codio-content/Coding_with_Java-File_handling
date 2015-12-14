@@ -2,7 +2,7 @@ Once we know the format of a file, how to do we load and read it? There are many
 
 One simple way to organize files is to establish an exact length for a record, which allows us to know how much data to read and write for each record. 
 
-The sample on the left shows a single variable containing records that are 6 or less characters long. The program splits up and prints out each number.
+The sample on the left shows a single variable containing records that are 6 characters long (a whitespace is also considered a character). The program splits up and prints out each number.
 
 {Run the sample}(content/fixed_length/FixedLength.sh)
 
