@@ -19,6 +19,12 @@ var B= process.argv[5]
 // 
 function load2dArrayFromFile(filepath){
   // Your code goes here:
+  var text= fs.readFileSync(filepath, 'utf8')
+  var records= text.split("\n")
+  for(var i=0; i < records.length; i++){
+    records[i]= records[i].split("|")
+  }
+  return records
 }
 
 //
@@ -27,24 +33,37 @@ function load2dArrayFromFile(filepath){
 // 
 function findIndex(records, firstname, lastname){
   // Your code goes here:
+  for(var i=0; i < records.length; i++){
+    if(records[i][0] == firstname && records[i][1] == lastname){
+      return i
+    }
+  }
+  return -1
 }
 
 // Sets the birthday of the record at the given index
 // Returns: nothing
 function setBirthday(records, index, newBirthday){
   // Your code goes here:
+  if(index >= 0 && index < records.length){
+    records[index][2]= newBirthday
+  }
 }
 
 // Convert one record into a pipe-delimited string
-// Return the pipe-delimited string
 function makeLineFromRecord(record){
   // Your code goes here:
+  return record.join("|");
 }
 
-// Convert the 2d array back into a string
-// Return the rull text of the 2d array
+// Convert the 2d array back into a string and return it
 function makeTextFrom2dArray(records){
   // Your code goes here:
+  var lines= []
+  for(var i=0; i < records.length; i++){
+    lines.push(makeLineFromRecord(records[i]))
+  }
+  return lines.join("\n")
 }
 
 // ----------------------------------------------------------------
@@ -65,8 +84,5 @@ setBirthday(records, indexWeAreHunting, B)
 // Convert the records into a text string
 var output= makeTextFrom2dArray(records)
 
-// Your code goes here
 // write the text string out to the file
-
-
-
+fs.writeFileSync(P, output, 'utf8')

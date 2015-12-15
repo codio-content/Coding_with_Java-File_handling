@@ -3,6 +3,7 @@ We can write the contents of a variable out to a file all at once like this:
 ```java
 String str = "Line 1";
 fw.write(str);
+fw.close();
 ```
 
 This command will cause the `FileWriter` library to write out the contents of the variable `str` to the file in the path contained in `filepath`.

@@ -341,7 +341,7 @@
      "action": "close"
     },
     {
-     "path": "challenges/variable-length.js",
+     "path": "challenges/variable-length/Challenge.java",
      "panel": 0,
      "action": "open"
     }
@@ -350,28 +350,6 @@
    "path": [],
    "type": "markdown",
    "content-file": ".guides/content/Challenge--Variable-Length-Records-6f58.md",
-   "chapter": false,
-   "reset": [],
-   "teacherOnly": false
-  },
-  {
-   "id": "69fc813d-535e-a9f2-48eb-c5bb2c69184",
-   "title": "Final Challenge",
-   "files": [
-    {
-     "path": "#tabs",
-     "action": "close"
-    },
-    {
-     "path": "challenges/bank-transactions.js",
-     "panel": 0,
-     "action": "open"
-    }
-   ],
-   "layout": "2-panels",
-   "path": [],
-   "type": "markdown",
-   "content-file": ".guides/content/Final-Challenge-69fc.md",
    "chapter": false,
    "reset": [],
    "teacherOnly": false
