@@ -1,8 +1,8 @@
-Fill in the **stubs** provided to complete the challenge. DO not forget what you have learned about splitting and joining strings and lists.
+Fill in the **stubs** provided to complete the challenge. DO NOT forget what you have learned about splitting and joining strings and lists.
 
 {Check It!|assessment}(test-2358046206)
 
-You can open the file at any moment by clicking this link:
+To check your results, click the link below to open the file as specified in the file path:
 
 [Open pipe.txt file](open_file challenges/variable-length/pipe.txt)
 

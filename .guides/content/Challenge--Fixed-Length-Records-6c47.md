@@ -1,6 +1,6 @@
 {Check It!|assessment}(test-1456892332)
 
-You can open the file at any moment by clicking this link:
+To check your results, click the link below to open the file as specified in the file path:
 
 [Open empty.txt file](open_file challenges/fixed-length-record/empty.txt)
 

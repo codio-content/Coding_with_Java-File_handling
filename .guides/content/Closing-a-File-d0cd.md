@@ -16,7 +16,6 @@ And the numbers assigned as file descriptors are printed out:
 System.out.println("File Desc A: "+ fileDescriptorA.hashCode()); // print file desc A   
 System.out.println("File Desc B: "+ fileDescriptorB.hashCode()); // print file desc B
 ```
-These numbers will be different and should be sequential. (*Note: there is a very tiny possibility that some other process on the system might run after the first file was opened before the second, which would give a different number. But this is not likely here.*)
 
 {Run Sample Code}(content/file_descriptor/Filedescriptor.sh)
 

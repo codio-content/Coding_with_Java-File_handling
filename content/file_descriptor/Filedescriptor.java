@@ -22,7 +22,7 @@ public class Filedescriptor {
       System.out.println("File Desc B: "+ fileDescriptorB.hashCode()); // print file desc B
 
       fileInputStreamA.close();                  // close file desc A
-      System.out.println("Closed A ["+fileDescriptorA+"]");
+      System.out.println("Closed A ["+fileDescriptorA.hashCode()+"]");
 
       FileInputStream fileInputStreamC = new FileInputStream(pathC);
       FileDescriptor fileDescriptorC = fileInputStreamC.getFD(); // open file C
