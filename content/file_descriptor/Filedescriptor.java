@@ -7,14 +7,14 @@ import java.io.IOException;
 public class Filedescriptor {
 
     public static void main(String[] args) throws IOException {
-      
+
       File pathA = new File("../textfiles/poem.txt");   // declare File type variables with paths
       File pathB = new File("../textfiles/cheese.txt"); // to files
       File pathC = new File("../textfiles/empty.txt");
-      
+
       FileInputStream fileInputStreamA = new FileInputStream(pathA); // open file A
       FileDescriptor fileDescriptorA = fileInputStreamA.getFD();
-      
+
       FileInputStream fileInputStreamB = new FileInputStream(pathB); // open file B
       FileDescriptor fileDescriptorB = fileInputStreamB.getFD();
 
@@ -31,6 +31,6 @@ public class Filedescriptor {
 
       fileInputStreamB.close(); // close file desc B
       fileInputStreamC.close(); // close file desc C
-      
+
     }
 }
