@@ -1,0 +1,82 @@
+[
+ {
+  "type": "test",
+  "taskId": "test-1456892332",
+  "source": {
+   "showName": true,
+   "answers": [],
+   "tokens": {
+    "blank": [],
+    "text": []
+   },
+   "name": "Fixed Length Records",
+   "instructions": "For this challenge, you are being passed a `filepath` and for each row in the 2D `data` array:\n- A first name\n- A last name\n- A birthday in DDMMYYYY order\n\nWrite to the file so that the resulting content should look like this:\n\n`Name........Lastname....DDMMYYYY`\n`Name........Lastname....DDMMYYYY`\n`Name........Lastname....DDMMYYYY`\n\nWhere each column, except for the last one, is being separated by `.` characters that are the result of subtracting the column length minus a fixed record length of 12. ",
+   "command": "tests/fixed-length-record-test/fixed-length-record-test.sh",
+   "points": 1
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-1690867941",
+  "source": {
+   "showName": true,
+   "answers": [],
+   "tokens": {
+    "blank": [],
+    "text": []
+   },
+   "name": "Account Transactions",
+   "instructions": "Given pipe-delimited files `F1` and `F2` where `F1` contains accounts with fields `ACCOUNT NUM|PIN|BALANCE` and `F2` contains transaction instructions `COMMAND|AMOUNT|ACCOUNT NUM|PIN`, execute the transactions, storing the results back in `F1`. \n\nThe `COMMAND` field will be `add` or `sub` indicating addition or subtraction from the account.\n\nTransactions which do not provide the correct `PIN` code or attempt to put the account below zero should be ignored.",
+   "command": "tests/bank-transactions-test.sh",
+   "points": 1
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-2358046206",
+  "source": {
+   "showName": true,
+   "answers": [],
+   "tokens": {
+    "blank": [],
+    "text": []
+   },
+   "name": "Variable Length Records",
+   "instructions": "Load the pipe-delimited file `P`. It is organized with 3 fields on each line: `firstname|lastname|birthday`.\n\nSearch for the firstname `F` and lastname `L`, replacing the birthday with `B`. Write the `O` file back out in the same pipe-delimited format.",
+   "command": "tests/variable-length-test/variable-length-test.sh",
+   "points": 1
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-3353555413",
+  "source": {
+   "showName": false,
+   "answers": [],
+   "tokens": {
+    "blank": [],
+    "text": []
+   },
+   "points": 1,
+   "command": "tests/read-text-file-test/read-text-file-test.sh",
+   "instructions": "You will be passed a file path `P` on the command line. Output the content of file P.",
+   "name": "Read a Text File"
+  }
+ },
+ {
+  "type": "test",
+  "taskId": "test-808628205",
+  "source": {
+   "showName": false,
+   "answers": [],
+   "tokens": {
+    "blank": [],
+    "text": []
+   },
+   "points": 1,
+   "command": "tests/write-text-file-test/write-text-file-test.sh",
+   "instructions": "You will be provided a file path for input `I`, a file path for output `O`, a string `S`, and a string `T`.\n\nRead the contents of `I`, replacing each occurrence of `S` with `T` and write the resulting information to file `O`. \n\nYou should replace `O` if it already exists.",
+   "name": "Writing a Text File"
+  }
+ }
+]
